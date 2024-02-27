@@ -26,6 +26,7 @@ class Ad(BaseAdvertising):
     
 
     def inc_clicks(self):
+        self.advertiser.inc_clicks()
         self.clicks+=1
 
 

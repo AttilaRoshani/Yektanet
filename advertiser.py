@@ -9,11 +9,11 @@ class Advertiser(BaseAdvertising):
             return
         super().__init__()
 
-        self.id = id
+        self.__id = id
         Advertiser.a.add(id)
-        self.name = name
-        self.clicks = 0
-        self.views = 0
+        self.__name = name
+        self.__clicks = 0
+        self.__views = 0
 
     def describe_me(self):
         print(f"This is an Advertiser with name {self.name}")

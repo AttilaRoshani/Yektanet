@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS AdvertiserTable (
     id INT PRIMARY KEY AUTO_INCREMENT,
     views INT,
     clicks INT,
-    name NVARCHAR(512)
+    name VARCHAR(512)
 );
 
 -- Ad table

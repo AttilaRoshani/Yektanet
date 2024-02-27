@@ -2,9 +2,15 @@ from base_model import BaseAdvertising
 
 class Advertiser(BaseAdvertising):
     total = 0
+    a =set()
     def __init__(self, id, name):
+        if(id in Advertiser.a):
+            print("id is already exists")
+            return
         super().__init__()
+
         self.id = id
+        Advertiser.a.add(id)
         self.name = name
         self.clicks = 0
         self.views = 0

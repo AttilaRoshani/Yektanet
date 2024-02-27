@@ -1,7 +1,7 @@
 from base_model import BaseAdvertising
 
 class Ad(BaseAdvertising):
-    a =set()
+    a = set()
     def __init__(self, id, title, img_url, link, advertiser):
         if(id in Ad.a):
             print("id is already exists")
@@ -9,10 +9,11 @@ class Ad(BaseAdvertising):
         super().__init__()
         self.__id = id
         Ad.a.add(id)
-        self.__title = title
-        self.__img_url = img_url
-        self.__link = link
+        self.title = title
+        self.img_url = img_url
+        self.link = link
         self.__advertiser = advertiser
+        self.clicks = 0
 
     def describe_me(self):
         print(f"This is an Ad with title {self.title}")
@@ -35,4 +36,4 @@ class Ad(BaseAdvertising):
 
 
     def set_advertiser(self, advertiser):
-        self.advertiser = advertiser
+        self.__advertiser = advertiser
